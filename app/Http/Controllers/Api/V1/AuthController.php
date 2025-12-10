@@ -26,6 +26,28 @@ class AuthController extends Controller
         return $this->success($result, 'User registered', 201);
     }
 
+    public function registerTenant(Request $request): JsonResponse
+    {
+        $data = $request->validate([
+            'owner_name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'email', 'max:255', 'unique:users,email'],
+            'password' => ['required', 'string', 'min:8'],
+            'business_name' => ['required', 'string', 'max:255'],
+            'business_slug' => ['required', 'string', 'max:255', 'unique:tenants,slug'],
+            'phone' => ['nullable', 'string', 'max:50'],
+        ]);
+
+        $result = $this->authService->registerTenant($data);
+
+        return $this->success([
+            'token' => $result['token'],
+            'tenant' => $result['tenant'],
+            'settings' => $result['settings'],
+            'branch' => $result['branch'],
+            'user' => $result['user'],
+        ], 'Tenant registered', 201);
+    }
+
     public function login(Request $request): JsonResponse
     {
         $credentials = $request->validate([

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Middleware\FormatApiResponse;
+use App\Http\Middleware\SetTenantMiddleware;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -22,6 +23,11 @@ return Application::configure(basePath: dirname(__DIR__))
 
         $middleware->appendToGroup('api', [
             FormatApiResponse::class,
+            SetTenantMiddleware::class,
+        ]);
+
+        $middleware->appendToGroup('web', [
+            SetTenantMiddleware::class,
         ]);
 
         $middleware->alias([
