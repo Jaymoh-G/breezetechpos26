@@ -8,10 +8,31 @@ function Sidebar() {
       <Card.Header className="fw-semibold">Navigation</Card.Header>
       <Nav className="flex-column p-2">
         <LinkContainer to="/">
-          <Nav.Link>Overview</Nav.Link>
+          <Nav.Link>Dashboard</Nav.Link>
         </LinkContainer>
-        <LinkContainer to="/reports">
-          <Nav.Link>Reports</Nav.Link>
+        <LinkContainer to="/products">
+          <Nav.Link>Products</Nav.Link>
+        </LinkContainer>
+        <LinkContainer to="/categories">
+          <Nav.Link>Categories</Nav.Link>
+        </LinkContainer>
+        <LinkContainer to="/inventory">
+          <Nav.Link>Inventory</Nav.Link>
+        </LinkContainer>
+        <LinkContainer to="/orders">
+          <Nav.Link>Orders</Nav.Link>
+        </LinkContainer>
+        <LinkContainer to="/sales">
+          <Nav.Link>Sales</Nav.Link>
+        </LinkContainer>
+        <LinkContainer to="/customers">
+          <Nav.Link>Customers</Nav.Link>
+        </LinkContainer>
+        <LinkContainer to="/branches">
+          <Nav.Link>Branches</Nav.Link>
+        </LinkContainer>
+        <LinkContainer to="/users">
+          <Nav.Link>Users</Nav.Link>
         </LinkContainer>
         <LinkContainer to="/settings">
           <Nav.Link>Settings</Nav.Link>

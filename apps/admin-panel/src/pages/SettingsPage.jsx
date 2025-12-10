@@ -1,11 +1,12 @@
 import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import Header from "../components/Header";
 
 function SettingsPage() {
   return (
     <div>
-      <h2 className="mb-3">Settings</h2>
+      <Header title="Settings" />
       <Card>
         <Card.Body>
           <Card.Title>Preferences</Card.Title>

@@ -14,8 +14,14 @@ function Navigation() {
             <LinkContainer to="/">
               <Nav.Link>Dashboard</Nav.Link>
             </LinkContainer>
-            <LinkContainer to="/reports">
-              <Nav.Link>Reports</Nav.Link>
+            <LinkContainer to="/products">
+              <Nav.Link>Products</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/orders">
+              <Nav.Link>Orders</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/sales">
+              <Nav.Link>Sales</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/settings">
               <Nav.Link>Settings</Nav.Link>

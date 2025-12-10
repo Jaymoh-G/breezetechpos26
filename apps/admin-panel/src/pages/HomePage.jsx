@@ -1,6 +1,7 @@
 import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Header from "../components/Header";
 import useAppStore from "../store/useAppStore";
 
 function HomePage() {
@@ -8,7 +9,7 @@ function HomePage() {
 
   return (
     <div>
-      <h2 className="mb-3">Dashboard</h2>
+      <Header title="Dashboard" />
       <Row xs={1} md={2} className="g-3">
         <Col>
           <Card>
