@@ -1,0 +1,23 @@
+{
+  "name": "breezetechpos-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@8",
+  "scripts": {
+    "dev:admin": "pnpm --filter admin-panel dev",
+    "dev:pos": "pnpm --filter pos-interface dev",
+    "dev:store": "pnpm --filter ecommerce-storefront dev",
+    "lint": "pnpm -r lint",
+    "format": "pnpm -r format"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "eslint": "^9.10.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-jsx-a11y": "^6.9.0",
+    "eslint-plugin-react": "^7.35.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "pnpm": "^8.15.9",
+    "prettier": "^3.3.3"
+  }
+}
